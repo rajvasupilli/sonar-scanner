@@ -28,7 +28,7 @@ jobs:
       # Install Sonar Scanner
       - name: Install SonarQube Scanner
         run: | 
-          SONAR_SCANNER_VERSION="4.4.0" && \
-          curl --insecure -L ${NEXUS2_SCM_TOOLS_URL}/sonar-scanner/${SONAR_SCANNER_VERSION}/sonar-scanner-${SONAR_SCANNER_VERSION}.zip -o /tmp/sonar-scanner.zip && \
+          SONAR_SCANNER_VERSION="8.5.1" && \
+          curl --insecure -L https://binaries.sonarsource.com/Distribution/sonarqube/${SONAR_SCANNER_VERSION}.*.zip -o /tmp/sonar-scanner.zip && \
           unzip -o -d /usr/bin/ /tmp/sonar-scanner.zip && mv /usr/bin/sonar-scanner-${SONAR_SCANNER_VERSION} /usr/bin/sonar-scanner && chmod -R 755 /usr/bin/sonar-scanner && rm -rf /tmp/sonar-scanner.zip
           echo " Sonar Scanner Installed Successfully!!"
