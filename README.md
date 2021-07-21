@@ -1,5 +1,4 @@
 # sonar-scanner
 
-# Testing
 
 
